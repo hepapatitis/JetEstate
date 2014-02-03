@@ -97,9 +97,101 @@ html,body { font-family:"Lato"; }
 /* Search Bar Related */
 .search-bar { background:#e0e0e0; padding:35px 0; }
 
+/* Buttons */
+.btn-unique {
+  color: #444;
+  background: transparent;
+  border:2px solid #777;
+}
+.btn-unique:hover,
+.btn-unique:focus,
+.btn-unique:active,
+.btn-unique.active,
+.open .dropdown-toggle.btn-unique {
+  color: #ff9900;
+  background: transparent;
+  border-color: #ff9900;
+  transition:all ease-in-out 0.3s;
+}
+.btn-unique:active,
+.btn-unique.active,
+.open .dropdown-toggle.btn-unique {
+  background-image: none;
+}
+.btn-unique.disabled,
+.btn-unique[disabled],
+fieldset[disabled] .btn-unique,
+.btn-unique.disabled:hover,
+.btn-unique[disabled]:hover,
+fieldset[disabled] .btn-unique:hover,
+.btn-unique.disabled:focus,
+.btn-unique[disabled]:focus,
+fieldset[disabled] .btn-unique:focus,
+.btn-unique.disabled:active,
+.btn-unique[disabled]:active,
+fieldset[disabled] .btn-unique:active,
+.btn-unique.disabled.active,
+.btn-unique[disabled].active,
+fieldset[disabled] .btn-unique.active {
+  background-color: transparent;
+  border-color: #898989;
+}
+.btn-unique .badge {
+  color: #428bca;
+  background: transparent;
+}
+
+
+.btn-main {
+  color: #fff;
+  background: #ff9900;
+  border:2px solid #ff9900;
+}
+.btn-main:hover,
+.btn-main:focus,
+.btn-main:active,
+.btn-main.active,
+.open .dropdown-toggle.btn-main {
+  color: #ff9900;
+  background: #fff;
+  border-color: #d98200;
+  transition:all ease-in-out 0.3s;
+}
+.btn-main:active,
+.btn-main.active,
+.open .dropdown-toggle.btn-main {
+  background-image: none;
+}
+.btn-main.disabled,
+.btn-main[disabled],
+fieldset[disabled] .btn-main,
+.btn-main.disabled:hover,
+.btn-main[disabled]:hover,
+fieldset[disabled] .btn-main:hover,
+.btn-main.disabled:focus,
+.btn-main[disabled]:focus,
+fieldset[disabled] .btn-main:focus,
+.btn-main.disabled:active,
+.btn-main[disabled]:active,
+fieldset[disabled] .btn-main:active,
+.btn-main.disabled.active,
+.btn-main[disabled].active,
+fieldset[disabled] .btn-main.active {
+  background-color: #ffc062;
+  border-color: #ff9900;
+}
+.btn-main .badge {
+  color: #428bca;
+  background: transparent;
+}
+
+
 /* Typography */
+p { text-align:justify; }
 .main-header { margin:30px 0; font-weight:300; text-align:center; color:#888; text-transform:uppercase; }
 .main-header:after { margin-top:25px; content:" "; background:url('../images/bg-gray-tile.png'); display:block; width:100%; height:5px; }
+.main-header small { color:#ff9900; font-weight:300; }
+.after-header-msg { text-align:center; margin-bottom:20px; color:#464646; }
 
 /* Listing */
 .listing { border:1px solid #bfbfbf; margin-top:10px; transition:all ease-in-out 0.195s; }
@@ -109,6 +201,7 @@ html,body { font-family:"Lato"; }
 .listing-price { padding:13px; border-top:1px solid #bfbfbf; text-align:center; }
 .listing-price span { font-size:23px; }
 .listing-price span.sale { font-size:23px; color:red; }
+.listing-price span.sold { font-size:23px; color:green; }
 .listing-price span.crossed { font-size:13px; text-decoration:line-through; color:#aaa; }
 .listing-action { border-top:1px solid #bfbfbf; text-align:center; }
 .listing-action a { display:block; padding:13px; color:#fff; background:#ff9900; text-transform:uppercase; border-top:1px solid rgba(255,255,255,0.4); transition:all ease-in-out 0.195s; }
@@ -163,3 +256,114 @@ html,body { font-family:"Lato"; }
 
 /* Copyright */
 .copyright { background:#242424; color:#aaa; padding:30px 0; text-align:center; text-shadow:1px 1px 2px #000; text-transform:uppercase; }
+
+/*
+	Quote Carousel
+	By: http://bootsnipp.com/snippets/featured/responsive-quote-carousel
+*/
+/* carousel */
+#quote-carousel 
+{
+  padding: 0 10px 30px 10px;
+  margin-top: 30px 0px 0px;
+}
+
+/* Control buttons  */
+#quote-carousel .carousel-control
+{
+  background: none;
+  color: #222;
+  font-size: 2.3em;
+  text-shadow: none;
+  margin-top: 30px;
+}
+/* Previous button  */
+#quote-carousel .carousel-control.left 
+{
+  left: -12px;
+}
+/* Next button  */
+#quote-carousel .carousel-control.right 
+{
+  right: -12px !important;
+}
+/* Changes the position of the indicators */
+#quote-carousel .carousel-indicators 
+{
+  right: 50%;
+  top: auto;
+  bottom: 0px;
+  margin-right: -19px;
+}
+/* Changes the color of the indicators */
+#quote-carousel .carousel-indicators li 
+{
+  background: #c0c0c0;
+}
+#quote-carousel .carousel-indicators .active 
+{
+  background: #333333;
+}
+#quote-carousel img
+{
+  width: 250px;
+  height: 100px
+}
+/* End carousel */
+
+.item blockquote {
+    border-left: none; 
+    margin: 0;
+}
+
+.item blockquote img {
+    margin-bottom: 10px;
+}
+
+.item blockquote p:before {
+    content: "\f10d";
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+}
+
+
+
+/**
+  MEDIA QUERIES
+*/
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    #quote-carousel 
+    {
+      margin-bottom: 0;
+      padding: 0 40px 30px 40px;
+      margin-top: 30px;
+    }
+}
+
+/* Small devices (tablets, up to 768px) */
+@media (max-width: 768px) { 
+    
+    /* Make the indicators larger for easier clicking with fingers/thumb on mobile */
+    #quote-carousel .carousel-indicators {
+        bottom: -20px !important;  
+    }
+    #quote-carousel .carousel-indicators li {
+        display: inline-block;
+        margin: 0px 5px;
+        width: 15px;
+        height: 15px;
+    }
+    #quote-carousel .carousel-indicators li.active {
+        margin: 0px 5px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Util */
+.big-margin { margin-top:80px; margin-bottom:80px;}
+.med-margin { margin-top:50px; margin-bottom:50px;}
+.sml-margin { margin-top:20px; margin-bottom:20px;}
