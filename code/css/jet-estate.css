@@ -97,6 +97,26 @@ html,body { font-family:"Lato"; }
   color: #333;
 }
 
+/* Navbar - Dropdown */
+.dropdown-menu > li > a {
+  display: block;
+  padding: 6px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.428571429;
+  color: #333;
+  white-space: nowrap;
+}
+
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #ff9900;
+  outline: 0;
+}
+
 /* Search Bar Related */
 .search-bar { background:#e0e0e0; padding:35px 0; }
 .search-bar label { color:#626262; text-shadow:1px 1px 1px #f0f0f0; }
@@ -158,7 +178,7 @@ fieldset[disabled] .btn-unique.active {
 .open .dropdown-toggle.btn-main {
   color: #ff9900;
   background: #fff;
-  border-color: #d98200;
+  border-color: #ff9900;
   transition:all ease-in-out 0.3s;
 }
 .btn-main:active,
@@ -193,6 +213,7 @@ fieldset[disabled] .btn-main.active {
 /* Typography */
 p { text-align:justify; }
 .main-header { margin:30px 0; font-weight:300; text-align:center; color:#888; text-transform:uppercase; }
+.separator,
 .main-header:after { margin-top:25px; content:" "; background:url('../images/bg-gray-tile.png'); display:block; width:100%; height:5px; }
 .main-header small { color:#ff9900; font-weight:300; }
 .after-header-msg { text-align:center; margin-bottom:20px; color:#464646; }
@@ -210,6 +231,24 @@ p { text-align:justify; }
 .listing-action { border-top:1px solid #bfbfbf; text-align:center; }
 .listing-action a { display:block; padding:13px; color:#fff; background:#ff9900; text-transform:uppercase; border-top:1px solid rgba(255,255,255,0.4); transition:all ease-in-out 0.195s; }
 .listing-action a:hover { text-decoration:none; color:#ff9900; background:#fff; }
+
+/* Horizontal Listing */
+.h-listing { border:1px solid #bfbfbf; padding:0; transition:all ease-in-out 0.195s; }
+.h-listing:hover { border:1px solid #999; box-shadow:0 0 10px #999; }
+
+.h-listing-title { background:#f0f0f0; color:#333; padding:12px 15px; }
+.h-listing-title.featured { background:#ff9900; color:#151515; }
+.h-listing-title h4 { padding:0; margin:0; }
+.h-listing-title i { margin-right:10px; }
+
+.h-listing-content { }
+.h-listing-desc { padding:10px 10px 0 0; }
+.h-listing-img { padding:10px; }
+.h-listing-price { padding:5px 10px 10px; text-align:center; }
+.h-listing-price span { font-size:23px; }
+.h-listing-price span.sale { font-size:23px; color:red; }
+.h-listing-price span.sold { font-size:23px; color:green; }
+.h-listing-price span.crossed { font-size:13px; text-decoration:line-through; color:#aaa; }
 
 /* Features */
 .feature { padding-top:6px; padding-bottom:0px; transition:all ease-in-out 0.195s; }
