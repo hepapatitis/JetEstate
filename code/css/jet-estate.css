@@ -233,22 +233,40 @@ p { text-align:justify; }
 .listing-action a:hover { text-decoration:none; color:#ff9900; background:#fff; }
 
 /* Horizontal Listing */
-.h-listing { border:1px solid #bfbfbf; padding:0; transition:all ease-in-out 0.195s; }
+.h-listing { border:1px solid #cdcdcd; padding:0; transition:all ease-in-out 0.195s; margin:25px 0; }
 .h-listing:hover { border:1px solid #999; box-shadow:0 0 10px #999; }
 
 .h-listing-title { background:#f0f0f0; color:#333; padding:12px 15px; }
-.h-listing-title.featured { background:#ff9900; color:#151515; }
+.featured .h-listing-title { background:#ff9900; color:#fff; }
 .h-listing-title h4 { padding:0; margin:0; }
 .h-listing-title i { margin-right:10px; }
 
+.h-listing-title h4 a { color:#333 }
+.featured .h-listing-title h4 a { color:#ffffff; }
+
+
 .h-listing-content { }
-.h-listing-desc { padding:10px 10px 0 0; }
+
+.h-listing-attr { padding:10px 10px 0 0; }
+.h-listing-desc { padding:0 10px 0 0; }
+.h-listing-action { padding:0px 10px 10px 0;}
+
+@media (max-width: 767px) {
+	.h-listing-attr,
+	.h-listing-action,
+	.h-listing-desc { padding:10px; }
+}
 .h-listing-img { padding:10px; }
 .h-listing-price { padding:5px 10px 10px; text-align:center; }
 .h-listing-price span { font-size:23px; }
 .h-listing-price span.sale { font-size:23px; color:red; }
 .h-listing-price span.sold { font-size:23px; color:green; }
 .h-listing-price span.crossed { font-size:13px; text-decoration:line-through; color:#aaa; }
+
+.h-listing-attr .attr { display:inline-block; margin:0 7px 0 0; padding:0 10px 0 0; border-right:1px dashed #ccc; }
+@media (max-width: 767px) {
+	.h-listing-attr .attr { padding:7px 10px; margin:3px; border:1px solid #ddd; }
+}
 
 /* Features */
 .feature { padding-top:6px; padding-bottom:0px; transition:all ease-in-out 0.195s; }
@@ -299,6 +317,30 @@ p { text-align:justify; }
 
 /* Copyright */
 .copyright { background:#242424; color:#aaa; padding:30px 0; text-align:center; text-shadow:1px 1px 2px #000; text-transform:uppercase; }
+
+/* Pagination */
+.pagination > li > a,
+.pagination > li > span {
+  color: #ff9900;
+}
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+  color: #fff;
+  background-color: #ff9900;
+  border-color: #ff9900;
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  color: #fff;
+  background-color: #ff9900;
+  border-color: #ff9900;
+}
 
 /*
 	Quote Carousel
@@ -353,6 +395,57 @@ p { text-align:justify; }
   height: 100px
 }
 /* End carousel */
+
+/* Thumbnail Carousel */
+#thumbnail-carousel 
+{
+  padding: 0 10px 20px 10px;
+  margin-top: 30px 0px 0px;
+}
+
+#thumbnail-carousel .carousel-control
+{
+	background: none;
+	color: #222;
+	font-size: 2.3em;
+	text-shadow: none;
+}
+
+/* Previous button  */
+#thumbnail-carousel .carousel-control.left 
+{
+  left: -45px;
+}
+/* Next button  */
+#thumbnail-carousel .carousel-control.right 
+{
+  right: -45px !important;
+}
+/* Changes the position of the indicators */
+#thumbnail-carousel .carousel-indicators 
+{
+  right: 50%;
+  top: auto;
+  bottom: 0px;
+  margin-right: -19px;
+}
+
+/* Changes the color of the indicators */
+#thumbnail-carousel .carousel-indicators li 
+{
+  background: #c0c0c0;
+}
+#thumbnail-carousel .carousel-indicators .active 
+{
+  background: #333333;
+}
+
+#thumbnail-carousel .item
+{
+	padding:0 40px;
+}
+
+/* End of Thumbnail Carousel */
 
 .item blockquote {
     border-left: none; 
