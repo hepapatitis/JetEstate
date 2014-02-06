@@ -20,3 +20,8 @@ $(document).ready(function() {
 		});
 	});
 });
+
+function update_image($url)
+{
+	$("#preview").attr("src",$url);
+}
