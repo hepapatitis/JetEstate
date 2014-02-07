@@ -83,17 +83,19 @@
 		</nav>
 		
 		<!-- Google Map -->
-		<div id="map_canvas"></div>
+		<div id="map_canvas" class="map-lrg-height"></div>
 		
 		<!-- Main -->
 		<div class="container">
 			<!-- Contact -->
-			<div class="row med-margin" data-animate="bounceIn">
+			<div class="row med-margin" data-animate="fadeInDown">
 				<div class="col-xs-12">
 					<h1 class="main-header">Contact Us</h1>
 					<p>Aliquam augue nibh, ullamcorper ut imperdiet quis, pellentesque accumsan erat. Nam porttitor nec nibh sit amet ultrices. Fusce varius cursus libero, vitae tincidunt elit lacinia ut. Praesent vestibulum a lorem quis eleifend. Fusce nulla neque, lacinia lacinia aliquam ac, rutrum et felis.</p>
 				</div>
 				<div class="col-sm-7">
+					<h3>Contact Form</h3>
+					<hr />
 					<form id="contact-form" method="post" class="form" role="form">
 						<div class="row">
 							<div class="col-xs-6 col-md-6 form-group">
@@ -110,14 +112,30 @@
 						<br />
 						<div class="row">
 							<div class="col-xs-12 col-md-12 form-group">
-								<button class="btn btn-main btn-block" type="submit">Send</button>
+								<button class="btn btn-unique btn-lg btn-block" type="submit">Send</button>
 							</div>
 						</div>
 					</form>
 				</div>
 				<div class="col-sm-5">
+					<h3>Or Reach Us Here</h3>
 					<hr />
-					<p><img src="images/dummy-phone.jpg" class="img-rounded img-responsive" alt="" /></p>
+					<p>
+						<span class="c-label"><i class="fa fa-map-marker"></i> Address:</span>
+						<span class="c-text">258 Herald St,<br />Cheltenham, VIC,<br />Australia</span>
+					</p>
+					<p>
+						<span class="c-label"><i class="fa fa-phone"></i> Phone:</span>
+						<span class="c-text">+61-3-1234-5678</span>
+					</p>
+					<p>
+						<span class="c-label"><i class="fa fa-phone"></i> Fax:</span>
+						<span class="c-text">+61-3-1234-5600</span>
+					</p>
+					<p>
+						<span class="c-label"><i class="fa fa-envelope"></i> Email:</span>
+						<span class="c-text"><a href="#">info@jetestate.com</a></span>
+					</p>
 				</div>
 			</div>
 		</div>
@@ -127,7 +145,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 text-center">
-						<form class="form-inline" role="form">
+						<form class="form-inline" role="form" action="properties-list.html" method="post">
 							<div class="form-group">
 								<label for="address">Location / Address</label><br />
 								<input type="text" class="form-control" id="address" placeholder="E.g: Degraves St">
@@ -220,14 +238,6 @@
 		
 		<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 		
-		<!-- FANCYBOX 2 SCRIPTS  -->
-		<!-- Add mousewheel plugin (this is optional) -->
-		<script type="text/javascript" src="plugins/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
-
-		<!-- Add fancyBox -->
-		<link rel="stylesheet" href="plugins/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
-		<script type="text/javascript" src="plugins/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
         <script>
 			/*
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
@@ -250,6 +260,7 @@
 				var map_options = {
 					center: myLatlng,
 					zoom: 17,
+					scrollwheel: false,
 					mapTypeId: google.maps.MapTypeId.ROADMAP
 				}
 				var map = new google.maps.Map(map_canvas, map_options);
@@ -259,7 +270,34 @@
 					position: myLatlng,
 					map: map,
 					title: 'Jet Estate',
-					icon: image
+					icon: image,
+				});
+				
+				
+				var contentString = '<h3 id="firstHeading" class="main-header">Jet Estate</h3>'+
+						'<p>'+
+							'<span class="c-label"><i class="fa fa-map-marker"></i> Address:</span>'+
+							'<span class="c-text">258 Herald St,<br />Cheltenham, VIC,<br />Australia</span>'+
+						'</p>'+
+						'<p>'+
+							'<span class="c-label"><i class="fa fa-phone"></i> Phone:</span>'+
+							'<span class="c-text">+61-3-1234-5678</span>'+
+						'</p>'+
+						'<p>'+
+							'<span class="c-label"><i class="fa fa-phone"></i> Fax:</span>'+
+							'<span class="c-text">+61-3-1234-5600</span>'+
+						'</p>'+
+						'<p>'+
+							'<span class="c-label"><i class="fa fa-envelope"></i> Email:</span>'+
+							'<span class="c-text"><a href="#">info@jetestate.com</a></span>'+
+						'</p>';
+
+				var infowindow = new google.maps.InfoWindow({
+					content: contentString
+				});
+				
+				google.maps.event.addListener(marker, 'click', function() {
+					infowindow.open(map,marker);
 				});
 			}
 			
