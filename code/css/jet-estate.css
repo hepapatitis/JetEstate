@@ -243,6 +243,10 @@ p { text-align:justify; }
 .listing-action a { display:block; padding:13px; color:#fff; background:#ff9900; text-transform:uppercase; border-top:1px solid rgba(255,255,255,0.4); transition:all ease-in-out 0.195s; }
 .listing-action a:hover { text-decoration:none; color:#ff9900; background:#fff; }
 
+.listing-attr { text-align:center; border-top:1px solid #bfbfbf; padding:13px; }
+.listing-attr .attr { display:inline-block; margin:3px 2px; padding:4px; border:1px solid #ccc; background:#f0f0f0; border-radius:4px; text-transform:uppercase; font-size:11px; transition:all ease-in-out 0.2s; }
+.listing-attr .attr:hover { border:1px solid #999; background:#eaeaea; }
+
 /* Horizontal Listing */
 .h-listing { border:1px solid #cdcdcd; padding:0; transition:all ease-in-out 0.195s; margin:25px 0; }
 .h-listing:hover { border:1px solid #999; box-shadow:0 0 10px #999; }
