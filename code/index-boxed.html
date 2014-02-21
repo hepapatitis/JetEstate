@@ -25,31 +25,30 @@
 		<![endif]-->
 
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+		<style>
+			body { background:url('images/ios-linen.jpg') fixed; }
+		</style>
     </head>
     <body>
-		<!-- Announcement -->
-		<div class="announcement">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12">
-						<div id="announcement" class="carousel slide" data-ride="carousel">
-							<div class="carousel-inner">
-								<div class="item active">
-									<i class="fa fa-info-circle"></i> &nbsp; We have upgraded our search algorithm. Try it now!
-								</div>
-								<div class="item">
-									<i class="fa fa-question-circle"></i> &nbsp; Do you know Jet Estate have three systems? Fire, Cloud and Lightning
-								</div>
+		<div class="container boxed">
+			<!-- Announcement -->
+			<div class="row announcement">
+				<div class="col-xs-12">
+					<div id="announcement" class="carousel slide" data-ride="carousel">
+						<div class="carousel-inner">
+							<div class="item active">
+								<i class="fa fa-info-circle"></i> &nbsp; We have upgraded our search algorithm. Try it now!
+							</div>
+							<div class="item">
+								<i class="fa fa-question-circle"></i> &nbsp; Do you know Jet Estate have three systems? Fire, Cloud and Lightning
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		
-		<!-- Navigation -->
-		<nav class="navbar navbar-je navbar-static-top" role="navigation">
-			<div class="container">
+			
+			<!-- Navigation -->
+			<nav class="navbar navbar-je navbar-static-top" role="navigation">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
@@ -86,59 +85,53 @@
 						</li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
-			</div>
-		</nav>
-		
-		<!-- Search Bar -->
-		<div class="search-bar">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12 text-center">
-						<form class="form-inline" role="form" action="properties-list.html" method="post">
-							<div class="form-group">
-								<label for="address">Location / Address</label><br />
-								<input type="text" class="form-control" id="address" placeholder="E.g: Degraves St">
-							</div>
-							<div class="form-group">
-								<label for="property-type">Property Type</label><br />
-								<select class="form-control" id="property-type">
-									<option>All</option>
-									<option>House</option>
-									<option>Apartment &amp; Unit</option>
-									<option>Apartment</option>
-									<option>Unit</option>
-									<option>Townhouse</option>
-									<option>Villa</option>
-									<option>Land</option>
-									<option>Acreage</option>
-									<option>Rural</option>
-									<option>Block of Units</option>
-									<option>Retirement Living</option>
-								</select>
-							</div>
-							<div class="form-group">
-								<label for="price-range">Price Range</label><br />
-								<select class="form-control" id="price-range">
-									<option>&lt; $100,000</option>
-									<option>$100,000 - $250,000</option>
-									<option>$250,000 - $500,000</option>
-									<option>$500,000 - $750,000</option>
-									<option>$750,000 - $1,500,000</option>
-									<option>&gt; $1,500,000</option>
-								</select>
-							</div>
-							<div class="form-group">
-								<label>&nbsp;</label><br />
-								<button type="submit" class="btn btn-default"><i class="fa fa-search"></i> Search</button>
-							</div>
-						</form>
-					</div>
+			</nav>
+			
+			<!-- Search Bar -->
+			<div class="row search-bar">
+				<div class="col-xs-12 text-center">
+					<form class="form-inline" role="form" action="properties-list.html" method="post">
+						<div class="form-group">
+							<label for="address">Location / Address</label><br />
+							<input type="text" class="form-control" id="address" placeholder="E.g: Degraves St">
+						</div>
+						<div class="form-group">
+							<label for="property-type">Property Type</label><br />
+							<select class="form-control" id="property-type">
+								<option>All</option>
+								<option>House</option>
+								<option>Apartment &amp; Unit</option>
+								<option>Apartment</option>
+								<option>Unit</option>
+								<option>Townhouse</option>
+								<option>Villa</option>
+								<option>Land</option>
+								<option>Acreage</option>
+								<option>Rural</option>
+								<option>Block of Units</option>
+								<option>Retirement Living</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="price-range">Price Range</label><br />
+							<select class="form-control" id="price-range">
+								<option>&lt; $100,000</option>
+								<option>$100,000 - $250,000</option>
+								<option>$250,000 - $500,000</option>
+								<option>$500,000 - $750,000</option>
+								<option>$750,000 - $1,500,000</option>
+								<option>&gt; $1,500,000</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label>&nbsp;</label><br />
+							<button type="submit" class="btn btn-default"><i class="fa fa-search"></i> Search</button>
+						</div>
+					</form>
 				</div>
 			</div>
-		</div>
-		
-		<!-- Main -->
-		<div class="container">
+			
+			<!-- Main -->
 			<!-- Featured Listings -->
 			<div class="row big-margin" data-animate="fadeInUp">
 				<div class="col-xs-12">
@@ -147,7 +140,6 @@
 				<div class="clearfix"></div>
 				<div class="col-md-3 col-sm-6">
 					<div class="listing">
-						<div class="listing-type rent">Rent</div>
 						<div class="listing-img">
 							<img src="images/dummy-01.jpg" class="img-responsive" />
 						</div>
@@ -170,7 +162,6 @@
 				</div>
 				<div class="col-md-3 col-sm-6">
 					<div class="listing">
-						<div class="listing-type sale">Sale</div>
 						<div class="listing-img">
 							<img src="images/dummy-02.jpg" class="img-responsive" />
 						</div>
@@ -195,7 +186,6 @@
 				<div class="clearfix visible-sm"></div>
 				<div class="col-md-3 col-sm-6">
 					<div class="listing">
-						<div class="listing-type sale">Sale</div>
 						<div class="listing-img">
 							<img src="images/dummy-01.jpg" class="img-responsive" />
 						</div>
@@ -218,7 +208,6 @@
 				</div>
 				<div class="col-md-3 col-sm-6">
 					<div class="listing">
-						<div class="listing-type others">Others</div>
 						<div class="listing-img">
 							<img src="images/dummy-02.jpg" class="img-responsive" />
 						</div>
@@ -245,7 +234,6 @@
 					<a href="properties-list.html" class="btn btn-lg btn-unique">Browse Featured Listings</a>
 				</div>
 			</div>
-			
 			<!-- Award Winning Real Estate -->
 			<div class="row big-margin" data-animate="bounceIn">
 				<div class="col-xs-12">
@@ -263,7 +251,7 @@
 					<a class="btn btn-unique" href="#">Learn More</a> <a class="btn btn-main" href="properties-list.html">Browse Listing</a>
 				</div>
 			</div>
-			
+				
 			<!-- What we are good with -->
 			<div class="row big-margin" data-animate="bounceIn">
 				<div class="col-xs-12">
@@ -304,7 +292,7 @@
 					</div>
 				</div>
 			</div>
-			
+				
 			<!-- Successful Listings -->
 			<div class="row big-margin" data-animate="bounceIn">
 				<div class="col-xs-12">
@@ -403,119 +391,110 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		
-		<div class="testimony">
-			<div class="container">
-				<div class="row big-margin" data-animate="bounceIn">
-					<div class="col-xs-12">
-						<h2 class="main-header">What Others Say About Us</h2>
-					</div>
-					<div class='col-xs-12'>
-						<div class="carousel slide" data-ride="carousel" id="quote-carousel">
-							<!-- Bottom Carousel Indicators -->
-							<ol class="carousel-indicators">
-								<li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
-								<li data-target="#quote-carousel" data-slide-to="1"></li>
-								<li data-target="#quote-carousel" data-slide-to="2"></li>
-							</ol>
-						
-							<!-- Carousel Slides / Quotes -->
-							<div class="carousel-inner">
-						
-							  <!-- Quote 1 -->
-							  <div class="item active">
-								<blockquote>
-								  <div class="row">
-									<div class="col-sm-3 text-center">
-									  <img class="img-circle" src="images/dummy-1-380x380.jpg" style="width: 100px;height:100px;">
-									</div>
-									<div class="col-sm-9">
-									  <p>The first time I used Jet Estate, I was able to find my ideal house. Thank you Jet Estate!</p>
-									  <small>Someone famous</small>
-									</div>
-								  </div>
-								</blockquote>
-							  </div>
-							  <!-- Quote 2 -->
-							  <div class="item">
-								<blockquote>
-								  <div class="row">
-									<div class="col-sm-3 text-center">
-									  <img class="img-circle" src="images/dummy-2-380x380.jpg" style="width: 100px;height:100px;">
-									</div>
-									<div class="col-sm-9">
-									  <p>Jet Estate gave me a wonderful experience searching for a new house! Good job guys!</p>
-									  <small>Someone a little bit famous</small>
-									</div>
-								  </div>
-								</blockquote>
-							  </div>
-							  <!-- Quote 3 -->
-							  <div class="item">
-								<blockquote>
-								  <div class="row">
-									<div class="col-sm-3 text-center">
-									  <img class="img-circle" src="images/dummy-3-380x380.jpg" style="width: 100px;height:100px;">
-									</div>
-									<div class="col-sm-9">
-									  <p>Umm.... Thank you Jet Estate! ..</p>
-									  <small>Someone infamous</small>
-									</div>
-								  </div>
-								</blockquote>
-							  </div>
-							</div>
+			
+			<div class="row testimony big-margin" data-animate="bounceIn">
+				<div class="col-xs-12">
+					<h2 class="main-header">What Others Say About Us</h2>
+				</div>
+				<div class='col-xs-12'>
+					<div class="carousel slide" data-ride="carousel" id="quote-carousel">
+						<!-- Bottom Carousel Indicators -->
+						<ol class="carousel-indicators">
+							<li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+							<li data-target="#quote-carousel" data-slide-to="1"></li>
+							<li data-target="#quote-carousel" data-slide-to="2"></li>
+						</ol>
 					
-							<!-- Carousel Buttons Next/Prev -->
-							<a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
-							<a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
-						</div>                          
-					</div>
+						<!-- Carousel Slides / Quotes -->
+						<div class="carousel-inner">
+					
+						  <!-- Quote 1 -->
+						  <div class="item active">
+							<blockquote>
+							  <div class="row">
+								<div class="col-sm-3 text-center">
+								  <img class="img-circle" src="images/dummy-1-380x380.jpg" style="width: 100px;height:100px;">
+								</div>
+								<div class="col-sm-9">
+								  <p>The first time I used Jet Estate, I was able to find my ideal house. Thank you Jet Estate!</p>
+								  <small>Someone famous</small>
+								</div>
+							  </div>
+							</blockquote>
+						  </div>
+						  <!-- Quote 2 -->
+						  <div class="item">
+							<blockquote>
+							  <div class="row">
+								<div class="col-sm-3 text-center">
+								  <img class="img-circle" src="images/dummy-2-380x380.jpg" style="width: 100px;height:100px;">
+								</div>
+								<div class="col-sm-9">
+								  <p>Jet Estate gave me a wonderful experience searching for a new house! Good job guys!</p>
+								  <small>Someone a little bit famous</small>
+								</div>
+							  </div>
+							</blockquote>
+						  </div>
+						  <!-- Quote 3 -->
+						  <div class="item">
+							<blockquote>
+							  <div class="row">
+								<div class="col-sm-3 text-center">
+								  <img class="img-circle" src="images/dummy-3-380x380.jpg" style="width: 100px;height:100px;">
+								</div>
+								<div class="col-sm-9">
+								  <p>Umm.... Thank you Jet Estate! ..</p>
+								  <small>Someone infamous</small>
+								</div>
+							  </div>
+							</blockquote>
+						  </div>
+						</div>
+				
+						<!-- Carousel Buttons Next/Prev -->
+						<a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+						<a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+					</div>                          
 				</div>
 			</div>
-		</div>
-		
-		<div class="footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-4">
-						<h3>Jet Estate</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum interdum nisi. Sed a laoreet odio, non dignissim dolor.</p>
-						<p>Donec faucibus feugiat sapien, at convallis mauris dignissim eu. Fusce fringilla sed diam id euismod. Mauris dui elit, pretium sit amet consequat eu, pellentesque vitae nunc.</p>
-					</div>
-					<div class="col-sm-4">
-						<h3>Daily Newsletter?</h3>
-						<p>Put down your email and we will let you know what's happening with Jet Estate <strong>daily</strong>.</p>
-						<form class="form-inline" role="form" action="javascript:void(0)">
-							<div class="input-group">
-								<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-								<input type="email" class="form-control" id="email" placeholder="Enter email" required />
-								<span class="input-group-btn">
-									<button type="submit" class="btn btn-success">Register</button>
-								</span>
-							</div>
-						</form>
-					</div>
-					<div class="col-sm-4">
-						<h3>Find us in Social Media</h3>
-						
-						<a class="social social-fb" href="#"><i class="fa fa-facebook"></i></a>
-						<a class="social social-linkedin" href="#"><i class="fa fa-linkedin"></i></a>
-						<a class="social social-instagram" href="#"><i class="fa fa-instagram"></i></a>
-						<a class="social social-pinterest" href="#"><i class="fa fa-pinterest"></i></a>
-						<a class="social social-twitter" href="#"><i class="fa fa-twitter"></i></a>
-						<a class="social social-tumblr" href="#"><i class="fa fa-tumblr"></i></a>
-						<a class="social social-youtube" href="#"><i class="fa fa-youtube"></i></a>
-					</div>
+			
+			<div class="row footer">
+				<div class="col-sm-4">
+					<h3>Jet Estate</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum interdum nisi. Sed a laoreet odio, non dignissim dolor.</p>
+					<p>Donec faucibus feugiat sapien, at convallis mauris dignissim eu. Fusce fringilla sed diam id euismod. Mauris dui elit, pretium sit amet consequat eu, pellentesque vitae nunc.</p>
+				</div>
+				<div class="col-sm-4">
+					<h3>Daily Newsletter?</h3>
+					<p>Put down your email and we will let you know what's happening with Jet Estate <strong>daily</strong>.</p>
+					<form class="form-inline" role="form" action="javascript:void(0)">
+						<div class="input-group">
+							<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+							<input type="email" class="form-control" id="email" placeholder="Enter email" required />
+							<span class="input-group-btn">
+								<button type="submit" class="btn btn-success">Register</button>
+							</span>
+						</div>
+					</form>
+				</div>
+				<div class="col-sm-4">
+					<h3>Find us in Social Media</h3>
+					
+					<a class="social social-fb" href="#"><i class="fa fa-facebook"></i></a>
+					<a class="social social-linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+					<a class="social social-instagram" href="#"><i class="fa fa-instagram"></i></a>
+					<a class="social social-pinterest" href="#"><i class="fa fa-pinterest"></i></a>
+					<a class="social social-twitter" href="#"><i class="fa fa-twitter"></i></a>
+					<a class="social social-tumblr" href="#"><i class="fa fa-tumblr"></i></a>
+					<a class="social social-youtube" href="#"><i class="fa fa-youtube"></i></a>
 				</div>
 			</div>
-		</div>
-		
-		<div class="copyright">
-			<div class="container">
+			
+			<div class="copyright row">
 				<footer>Jet Estate &copy; 2014</footer>
 			</div>
+		
 		</div>
 		
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
