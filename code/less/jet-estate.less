@@ -42,7 +42,7 @@
 @listing-border-separation:#d5d5d5;
 
 // Let's Start
-html,body { font-family:@body-font; color:@text-color; }
+html,body { font-family:@body-font; color:@text-color; background:url('../images/ios-linen.jpg') fixed; }
 
 /* Page Wrapper */
 .page-wrapper { margin:0 auto; position:relative; background:#fff; }
@@ -348,6 +348,7 @@ p { text-align:justify; }
 
 .listing-content { padding:13px; border-top:1px solid @listing-border-separation; }
 .listing-price { padding:13px; border-top:1px solid @listing-border-separation; text-align:center; }
+.listing-price.no-sale { padding:23px 13px; }
 .listing-price span { font-size:23px; }
 .listing-price span.sale { font-size:23px; color:red; }
 .listing-price span.sold { font-size:23px; color:green; }
@@ -657,7 +658,11 @@ p { text-align:justify; }
 .sml-margin { margin-top:20px; margin-bottom:20px;}
 
 /* Settings Switcher / page-settings */
-.page-settings { position:fixed; top:20px; right:20px; width:250px; z-align:9999; }
+.page-settings-container { position:fixed; top:15%; right:0px; width:280px; z-index:9999; .transition(0.35s); }
+.page-settings-container.closed { right:-236px; }
+.page-settings-container.open { right:0; }
+.page-settings-icon { width:44px; height:44px; background:#333; color:#fff; text-align:center; font-size:20px; padding:7px 0 0; float:left; cursor:pointer; border-left:2px solid #aaa; }  
+.page-settings { margin-left:44px; }
 .page-settings-header { background:#333; color:#fff; padding:12px 15px; }
 .page-settings-content { background:#444; color:#fff; padding:12px 15px; }
 
