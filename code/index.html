@@ -29,7 +29,7 @@
     <body>
 		<div class="page-wrapper wide">
 			<!-- Announcement -->
-			<div class="announcement">
+			<div class="announcement light">
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12">
@@ -593,8 +593,12 @@
 					</div>
 					<hr />
 					<div class="setting">
-						<h5>Color Presets</h5>
-						
+						<h5>Announcement</h5>
+						<select class="form-control" id="setting-announcement" onchange="update_settings()">
+							<option value="" selected="selected">Default</option>
+							<option value="dark">Dark</option>
+							<option value="light">Light</option>
+						</select>
 						<div class="clearfix"></div>
 					</div>
 				</div>

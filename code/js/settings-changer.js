@@ -1,9 +1,16 @@
 function update_settings()
 {
+	// Layout
 	var tmp = $("[name='setting-layout']:checked").val();
 	$(".page-wrapper").removeClass("wide");
 	$(".page-wrapper").removeClass("boxed");
 	$(".page-wrapper").addClass(tmp);
+	
+	// Announcement
+	tmp = $("#setting-announcement").val();
+	$(".announcement").removeClass("dark");
+	$(".announcement").removeClass("light");
+	$(".announcement").addClass(tmp);
 }
 
 function toggle_settings()
