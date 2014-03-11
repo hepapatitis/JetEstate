@@ -22,7 +22,7 @@
     <body>
 		<div class="page-wrapper wide">
 			<!-- Announcement -->
-			<div class="announcement">
+			<div class="announcement dark">
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12">
@@ -68,6 +68,13 @@
 							</li>
 							<li><a href="about.html">About</a></li>
 							<li class="active"><a href="faq.html">FAQ</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog  <i class="fa fa-angle-down"></i></a>
+								<ul class="dropdown-menu">
+									<li><a href="blog-list.html">Blog List</a></li>
+									<li><a href="blog-detail.html">Blog Detail</a></li>
+								</ul>
+							</li>
 							<li><a href="contact.html">Contact</a></li>
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Others <i class="fa fa-angle-down"></i></a>
@@ -283,9 +290,9 @@
 					<div class="setting">
 						<h5>Announcement</h5>
 						<select class="form-control" id="setting-announcement" onchange="update_settings()">
-							<option value="" selected="selected">Default</option>
-							<option value="dark">Dark</option>
+							<option value="dark" selected="selected">Dark</option>
 							<option value="light">Light</option>
+							<option value="">Main Colour</option>
 						</select>
 						<div class="clearfix"></div>
 					</div>

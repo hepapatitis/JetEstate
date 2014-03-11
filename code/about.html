@@ -22,7 +22,7 @@
     <body>
 		<div class="page-wrapper wide">
 			<!-- Announcement -->
-			<div class="announcement">
+			<div class="announcement dark">
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12">
@@ -68,6 +68,13 @@
 							</li>
 							<li class="active"><a href="about.html">About</a></li>
 							<li><a href="faq.html">FAQ</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog  <i class="fa fa-angle-down"></i></a>
+								<ul class="dropdown-menu">
+									<li><a href="blog-list.html">Blog List</a></li>
+									<li><a href="blog-detail.html">Blog Detail</a></li>
+								</ul>
+							</li>
 							<li><a href="contact.html">Contact</a></li>
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Others <i class="fa fa-angle-down"></i></a>
@@ -87,7 +94,7 @@
 			<div class="about">
 				<div class="container">
 					<div class="row">
-						<div class="card" data-animate="fadeInUp">
+						<div class="card">
 							<div class="col-xs-12">
 								<h1 class="main-header">We Are Determined To Help People</h1>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget ligula pharetra, semper lectus hendrerit, hendrerit leo. Nulla nec est massa. Etiam malesuada, risus at pretium convallis, est sem facilisis nulla, ut facilisis sapien tellus vitae metus.</p>
@@ -110,7 +117,7 @@
 			</div>
 			<div class="container">
 				<!-- Award Winning Real Estate -->
-				<div class="row big-margin" data-animate="bounceIn">
+				<div class="row big-margin">
 					<div class="col-xs-12">
 						<h2 class="main-header">As Simple As Playing Your Phone</h2>
 					</div>
@@ -127,7 +134,7 @@
 				</div>
 				
 				<!-- Our Multi System -->
-				<div class="row big-margin" data-animate="bounceIn">
+				<div class="row big-margin" data-animate="fadeInUp">
 					<div class="col-xs-12">
 						<h2 class="main-header">Our Multi System</h2>
 					</div>
@@ -286,9 +293,9 @@
 					<div class="setting">
 						<h5>Announcement</h5>
 						<select class="form-control" id="setting-announcement" onchange="update_settings()">
-							<option value="" selected="selected">Default</option>
-							<option value="dark">Dark</option>
+							<option value="dark" selected="selected">Dark</option>
 							<option value="light">Light</option>
+							<option value="">Main Colour</option>
 						</select>
 						<div class="clearfix"></div>
 					</div>

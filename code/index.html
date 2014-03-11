@@ -29,7 +29,7 @@
     <body>
 		<div class="page-wrapper wide">
 			<!-- Announcement -->
-			<div class="announcement light">
+			<div class="announcement dark">
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12">
@@ -75,6 +75,13 @@
 							</li>
 							<li><a href="about.html">About</a></li>
 							<li><a href="faq.html">FAQ</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog  <i class="fa fa-angle-down"></i></a>
+								<ul class="dropdown-menu">
+									<li><a href="blog-list.html">Blog List</a></li>
+									<li><a href="blog-detail.html">Blog Detail</a></li>
+								</ul>
+							</li>
 							<li><a href="contact.html">Contact</a></li>
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Others <i class="fa fa-angle-down"></i></a>
@@ -141,7 +148,7 @@
 			<!-- Main -->
 			<div class="container">
 				<!-- Featured Listings -->
-				<div class="row big-margin" data-animate="fadeInUp">
+				<div class="row big-margin">
 					<div class="col-xs-12">
 						<h1 class="main-header"><span>Featured</span> Listings</h1>
 						<div class="after-header-msg"><i>Listing with <strong>Responsive Carousels</strong></i></div>
@@ -302,7 +309,7 @@
 				</div>
 				
 				<!-- Award Winning Real Estate -->
-				<div class="row big-margin" data-animate="bounceIn">
+				<div class="row big-margin" data-animate="fadeInUp">
 					<div class="col-xs-12">
 						<h2 class="main-header">As Simple As Playing Your Phone</h2>
 					</div>
@@ -320,7 +327,7 @@
 				</div>
 				
 				<!-- What we are good with -->
-				<div class="row big-margin" data-animate="bounceIn">
+				<div class="row big-margin">
 					<div class="col-xs-12">
 						<h2 class="main-header">Our Multi System</h2>
 					</div>
@@ -361,7 +368,7 @@
 				</div>
 				
 				<!-- Successful Listings -->
-				<div class="row big-margin" data-animate="bounceIn">
+				<div class="row big-margin">
 					<div class="col-xs-12">
 						<h2 class="main-header">Successful Listings<br /><small>Some of our listings which got successfully sold</small></h2>
 						<div class="after-header-msg">
@@ -464,7 +471,7 @@
 			
 			<div class="testimony">
 				<div class="container">
-					<div class="row big-margin" data-animate="bounceIn">
+					<div class="row big-margin" data-animate="fadeInUp">
 						<div class="col-xs-12">
 							<h2 class="main-header">What Others Say About Us</h2>
 						</div>
@@ -604,9 +611,9 @@
 					<div class="setting">
 						<h5>Announcement</h5>
 						<select class="form-control" id="setting-announcement" onchange="update_settings()">
-							<option value="" selected="selected">Default</option>
-							<option value="dark">Dark</option>
+							<option value="dark" selected="selected">Dark</option>
 							<option value="light">Light</option>
+							<option value="">Main Colour</option>
 						</select>
 						<div class="clearfix"></div>
 					</div>
