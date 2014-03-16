@@ -16,7 +16,10 @@
         <link rel="stylesheet" href="css/bootstrap.min.css" type='text/css'>
         <link rel="stylesheet" href="css/jet-estate.css" type='text/css' data-s="main">
         <link rel="stylesheet" href="css/animate.css" type='text/css' data-s="main">
-
+		
+		<!-- FlexSlider -->
+		<link rel="stylesheet" href="plugins/flexslider/flexslider.css" type='text/css'>
+		
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
     <body>
@@ -149,43 +152,54 @@
 					
 					<!-- Listing Info -->
 					<div class="col-md-8">
-						<div class="preview" id="photo-preview">
-							<img id="preview" src="images/dummy-02.jpg" class="img-responsive img-rounded" />
+						<!-- Flexslider: Slider -->
+						<div id="slider" class="flexslider">
+							<ul class="slides">
+								<li>
+									<img src="images/dummy-01.jpg" />
+								</li>
+								<li>
+									<img src="images/dummy-02.jpg" />
+								</li>
+								<li>
+									<img src="images/dummy-03.jpg" />
+								</li>
+								<li>
+									<img src="images/dummy-01.jpg" />
+								</li>
+								<li>
+									<img src="images/dummy-02.jpg" />
+								</li>
+								<li>
+									<img src="images/dummy-03.jpg" />
+								</li>
+							</ul>
 						</div>
 						
-						<hr />
-						
-						<!-- Thumbnail Carousel -->
-						<div id="thumbnail-carousel" class="carousel slide" data-ride="carousel">
-							<ol class="carousel-indicators">
-								<li data-target="#thumbnail-carousel" data-slide-to="0" class="active"></li>
-								<li data-target="#thumbnail-carousel" data-slide-to="1"></li>
-							</ol>
-							 
-							<!-- Carousel items -->
-							<div class="carousel-inner">
-								<div class="item active">
-									<div class="row">
-									  <div class="col-xs-4"><a href="javascript:void(0)" class="thumbnail"><img src="images/dummy-02.jpg" alt="Image" style="max-width:100%;" /></a></div>
-									  <div class="col-xs-4"><a href="javascript:void(0)" class="thumbnail"><img src="images/dummy-01.jpg" alt="Image" style="max-width:100%;" /></a></div>
-									  <div class="col-xs-4"><a href="javascript:void(0)" class="thumbnail"><img src="images/dummy-03.jpg" alt="Image" style="max-width:100%;" /></a></div>
-									</div>
-								</div>
-								 
-								<div class="item">
-									<div class="row">
-										<div class="col-xs-4"><a href="javascript:void(0)" class="thumbnail"><img src="http://placehold.it/750x500" alt="Image" style="max-width:100%;" /></a></div>
-										<div class="col-xs-4"><a href="javascript:void(0)" class="thumbnail"><img src="http://placehold.it/750x500" alt="Image" style="max-width:100%;" /></a></div>
-										<div class="col-xs-4"><a href="javascript:void(0)" class="thumbnail"><img src="http://placehold.it/750x500" alt="Image" style="max-width:100%;" /></a></div>
-									</div>
-								</div>
-							 
-							</div>
-							 
-							<a class="left carousel-control" href="#thumbnail-carousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-							<a class="right carousel-control" href="#thumbnail-carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+						<!-- Flexslider: Carousel -->
+						<div id="carousel" class="flexslider">
+							<ul class="slides">
+								<li>
+									<img src="images/dummy-01.jpg" />
+								</li>
+								<li>
+									<img src="images/dummy-02.jpg" />
+								</li>
+								<li>
+									<img src="images/dummy-03.jpg" />
+								</li>
+								<li>
+									<img src="images/dummy-01.jpg" />
+								</li>
+								<li>
+									<img src="images/dummy-02.jpg" />
+								</li>
+								<li>
+									<img src="images/dummy-03.jpg" />
+								</li>
+							</ul>
 						</div>
-						
+
 						<hr class="visible-xs" />
 						<hr class="visible-sm" />
 					</div>
@@ -369,6 +383,9 @@
 		
 		<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 		
+		<!-- FlexSlider -->
+		<script src="plugins/flexslider/jquery.flexslider.js"></script>
+		
         <script>
 			/*
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
@@ -376,6 +393,28 @@
             g.src='//www.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
 			*/
+			
+			// FlexSlider
+			$(window).load(function() {
+			  // The slider being synced must be initialized first
+			  $('#carousel').flexslider({
+				animation: "slide",
+				controlNav: false,
+				animationLoop: false,
+				slideshow: false,
+				itemWidth: 210,
+				itemMargin: 5,
+				asNavFor: '#slider'
+			  });
+			   
+			  $('#slider').flexslider({
+				animation: "slide",
+				controlNav: false,
+				animationLoop: false,
+				slideshow: false,
+				sync: "#carousel"
+			  });
+			});
 			
 			$(document).ready(function() {
 				// Set the carousel options

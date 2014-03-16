@@ -177,6 +177,41 @@ a:focus {
   .transition(0.225s, @default-transition-ease);
 }
 
+/* Call to Action */
+.call-to-action {
+	margin:0;
+	padding:30px 0;
+	background:#f0f0f0;
+	border-top:1px solid darken(#f0f0f0,8%);
+	
+	h1,h2,h3,h4,h5,h6 { padding:5px 0; margin:0; font-weight:200; }
+}
+
+/* Breadcrumb - Navi */
+.breadcrumb-navi {
+	.gradient(@main-color, darken(@main-color,5%), @main-color);
+	padding:20px 0;
+	color:#fff;
+	margin-bottom:40px;
+	
+	h1,h2,h3,h4,h5,h6 {
+		margin:0; padding:0; font-weight:200;
+		
+		small.secondary {
+			color:#fff;
+			font-weight:200;
+			display:inline-block;
+			margin-left:15px;
+			
+			&:before {
+				content:"//";
+				margin-right:15px;
+				display:inline-block;
+			}
+		}
+	}
+}
+
 /* Vertical Navigation */
 
 .vertical-nav {
@@ -341,7 +376,13 @@ p { text-align:justify; line-height:170%; margin:0 0 18px; }
 .main-header span { font-weight:500; color:#000; }
 .after-header-msg { text-align:center; margin-bottom:20px; color:#464646; }
 
-.secondary-header { font-family:@header-font; color:#222; margin:10px 0 8px; padding-bottom:20px; }
+.secondary-header {
+	font-family:@header-font; color:#222; margin:10px 0 8px; padding-bottom:20px;
+	
+	a {
+		&:hover { text-decoration:none; }
+	}
+}
 .secondary-header:after {
 	content:"";
 	display:block;
@@ -444,8 +485,8 @@ p { text-align:justify; line-height:170%; margin:0 0 18px; }
 .h-listing-price span.sold { font-size:23px; color:green; }
 .h-listing-price span.crossed { font-size:13px; text-decoration:line-through; color:#aaa; }
 
-.h-listing-attr .attr { display:inline-block; padding:5px 10px; margin:2px 1px; border:1px solid #e0e0e0; background:#555; color:#fff; font-size:12px; text-transform:uppercase; .transition(); }
-.h-listing-attr .attr:hover { background:#333; color:#fff; }
+.h-listing-attr .attr { display:inline-block; padding:5px 10px; margin:2px 1px; border:1px solid #e0e0e0; background:#555; color:#fff; font-size:12px; text-transform:uppercase; .transition(); .rounded(0); }
+.h-listing-attr .attr:hover { background:#333; color:#fff; .border-radius(7px); }
 @media (max-width: 767px) {
 	.h-listing-attr .attr { padding:5px 10px; margin:3px; border:1px solid #e0e0e0; }
 }
