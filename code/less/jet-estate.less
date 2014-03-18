@@ -538,6 +538,83 @@ p { text-align:justify; line-height:170%; margin:0 0 18px; }
 .social-yahoo:hover { background:#96d3f0; color:#fff; }
 .social-youtube:hover { background:#d84939; color:#fff; }
 
+/* Pricing Tables - #1 */
+.pricing-table {
+	border:3px solid darken(#fff,10%); padding:6px; .rounded(8px); margin:10px 0;
+	&:hover {
+		border:3px solid @main-color;
+	}
+	
+	.pricing-title {
+		text-align:center;
+		
+		h1,h2,h3,h4,h5,h6 { margin:0; padding:20px 0 25px; }
+	}
+	.pricing-price {
+		text-align:center; 
+		background:@main-color;
+		color:#fff;
+		margin:0;
+		padding:15px 0;
+		border:3px solid darken(@main-color,10%);
+		font-weight:200;
+		
+		.highlight { font-size:45px; }
+		.quantifier { display:block; text-align:center; }
+	}
+	.pricing-list {
+		text-align:center; margin:0; padding:0;
+		list-style:none;
+		li {
+			margin:0; padding:15px 0;
+			border-top:1px solid darken(#fff,5%);
+			
+			&:first-child {}
+		}
+	}
+	.pricing-desc { border-top:1px solid darken(#fff,5%); padding:15px; font-size:12px; font-weight:200; }
+	.pricing-action { text-align:center; }
+}
+
+/* Pricing Tables - #2 */
+.pricing-table-2 {
+	background:darken(#fff,4%);
+	padding:6px; .rounded(8px); margin:10px 0;
+	&:hover {
+		background:darken(@main-color,7.5%);
+		color:#fff;
+		
+		.pricing-desc { border-top:1px solid darken(@main-color,5%); }
+	}
+	
+	.pricing-title {
+		text-align:center;
+		
+		h1,h2,h3,h4,h5,h6 { margin:0; padding:20px 0 25px; }
+	}
+	.pricing-price {
+		text-align:center; 
+		margin:0;
+		padding:15px 0;
+		font-weight:200;
+		
+		.highlight { font-size:45px; }
+		.quantifier { display:block; text-align:center; }
+	}
+	.pricing-list {
+		text-align:center;
+		margin:10px 0;
+		padding:0;
+		list-style:none;
+		
+		li {
+			margin:0; padding:7px 0;
+		}
+	}
+	.pricing-desc { border-top:1px solid darken(#fff,6%); padding:15px; font-size:12px; font-weight:200; }
+	.pricing-action { text-align:center; }
+}
+
 /* Footer */
 .footer { background:@footer-background; color:@footer-body-color; padding:70px 5px; }
 .footer h1, .footer h2, .footer h3, .footer h4, .footer h5, .footer h6 { font-family:@header-font; color:@footer-header-color; margin:10px 0 30px; border-bottom:1px dotted #555; padding-bottom:30px; }
