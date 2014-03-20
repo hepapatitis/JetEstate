@@ -219,7 +219,7 @@ a:focus {
 	
 	li { 
 		margin:0; padding:13px 10px; 
-		border-top:1px dotted #d0d0d0;
+		border-top:1px dotted darken(#fff,10%);
 		
 		&:first-child { border-top:0; }
 		a {
@@ -244,6 +244,26 @@ a:focus {
 	border-bottom:4px solid #eee; margin-bottom:10px;
 	
 	h1,h2,h3,h4,h5,h6 { border-bottom:1px solid #ddd; padding-bottom:15px; margin-bottom:0; }
+}
+
+/* Widget - Recent Post */
+.recent-post {
+	margin:0; padding:0; list-style:none;
+	
+	li {
+		padding:10px;
+		clear:both;
+		border-top:1px solid darken(#fff,10%);
+		
+		&:first-child { border-top:0; }
+		
+		.thumb {
+			float:left; margin:0 15px 15px 0;
+			img { width:65px; height:65px; .rounded(5px); }
+		}
+		.time { font-size:13px; color:#888; padding-top:5px; display:inline-block; }
+		h1,h2,h3,h4,h5,h6 { margin:0; padding:0; line-height:150%; font-size:14px; }
+	}	
 }
 
 /* Search Bar Related */
