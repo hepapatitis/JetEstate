@@ -177,15 +177,6 @@ a:focus {
   .transition(0.225s, @default-transition-ease);
 }
 
-/* Call to Action */
-.call-to-action {
-	margin:0;
-	padding:30px 0;
-	background:#f0f0f0;
-	border-top:1px solid darken(#f0f0f0,8%);
-	
-	h1,h2,h3,h4,h5,h6 { padding:5px 0; margin:0; font-weight:200; }
-}
 
 /* Breadcrumb - Navi */
 .breadcrumb-navi {
@@ -271,7 +262,10 @@ a:focus {
 .search-bar label { color:@search-bar-label-color; text-shadow:1px 1px 1px rgba(0,0,0,0.1); }
 .search-bar form { padding:35px 0; }
 
-/* Buttons */
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */ 
 // Btn Unique
 .btn-unique {
   color: @btn-unique-color;
@@ -387,13 +381,62 @@ input:focus,
 	outline: 0 none;
 }
 
-/* Typography */
-p { text-align:justify; line-height:170%; margin:0 0 18px; }
-.main-header { font-family:@header-font; margin:30px 0; font-weight:200; text-align:center; color:@header-color; }
-.separator,
-.main-header:after { margin:25px auto; content:" "; background:url('../images/bg-gray-tile.png'); display:block; width:100px; height:3px; }
-.main-header small { color:@main-color; font-weight:300; }
-.main-header span { font-weight:500; color:#000; }
+/* ==========================================================================
+   Backgrounds
+   ========================================================================== */ 
+.dark-bg {
+	background:#303030;
+	color:#aaa;
+	
+	h1,h2,h3,h4,h5,h6 {
+		color:#fff;
+	}
+}
+
+.light-gray-bg {
+	background:#eee;
+	color:555;
+}
+
+.ivory-bg {
+	background:#ede0cd;
+	color:555;
+}
+
+.inner-shadow {
+	box-shadow:inset 0 0 3px rgba(0,0,0,0.25);
+}
+
+/* ==========================================================================
+   Callout
+   ========================================================================== */ 
+.callout {
+	z-index: 10;
+	padding: 32px 0;
+	
+	h1,h2,h3,h4,h5,h6 { margin:auto 0 5px; }
+	p { margin:auto; }
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */ 
+p { line-height:170%; margin:0 0 18px; }
+h1,h2,h3,h4,h5,h6 { text-transform: uppercase; font-weight: 100; }
+h1 { font-size:28px; }
+h2 { font-size:25px; }
+h3 { font-size:22px; }
+h4 { font-size:20px; }
+h5 { font-size:18px; }
+h6 { font-size:15px; }
+.main-header { font-family:@header-font; margin:20px 0; font-weight:200; color:@header-color; border-bottom:1px solid #bbb;
+	&:after { margin:10px 0 -2px; content:" "; background:url('../images/bg-gray-tile.png'); display:block; width:100px; height:3px; }
+	&.no-border { border-bottom:0; }
+	&.no-border:after { display:none; }
+	
+	small { color:@main-color; font-weight:300; }
+	span { font-weight:600; color:#000; }
+}
 .after-header-msg { text-align:center; margin-bottom:20px; color:#464646; }
 
 .secondary-header {
@@ -416,7 +459,10 @@ p { text-align:justify; line-height:170%; margin:0 0 18px; }
 .c-label { vertical-align:top; width:90px; text-align:right; display:inline-block; margin-right:7px; color:#888; }
 .c-text { vertical-align:top; display:inline-block; }
 
-/* Blog */
+
+/* ==========================================================================
+   Blog
+   ========================================================================== */ 
 .post-tags {
 	padding:10px 15px; background:#f3f3f3; display:block; margin:10px 0 20px; border-bottom:1px solid #ccc; border-right:1px solid #e0e0e0; .box-shadow(0 1px 1px rgba(0,0,0,0.2)); color:#707070; font-size:13px;
 }
@@ -449,7 +495,10 @@ p { text-align:justify; line-height:170%; margin:0 0 18px; }
 .author-info { background:#f0f0f0; .rounded(7px); padding:18px; margin:10px 0; border-bottom:2px solid darken(#f0f0f0,10%); }
 .written-by { font-size:20px; font-weight:300; margin-bottom:5px; }
 
-/* Listing */
+
+/* ==========================================================================
+   Listing
+   ========================================================================== */ 
 .listing { border:1px solid @listing-border-separation; margin-top:10px; .transition(@default-transition-duration, @default-transition-ease); }
 .listing:hover { border:1px solid #999; .box-shadow(0 0 10px #999); margin-top:4px; }
 .listing:hover a { padding:15px; }
@@ -476,7 +525,7 @@ p { text-align:justify; line-height:170%; margin:0 0 18px; }
 .listing-attr .attr:hover { border:1px solid #999; background:#eaeaea; }
 
 /* Horizontal Listing */
-.h-listing { border:1px solid #cdcdcd; padding:0; .transition(@default-transition-duration, @default-transition-ease); margin:25px 0; }
+.h-listing { border:1px solid #d2d2d2; padding:0; .transition(@default-transition-duration, @default-transition-ease); margin:25px 0; }
 .h-listing:hover { border:1px solid #999; .box-shadow(0 0 10px #999); }
 
 .h-listing-title { background:#f0f0f0; color:#333; padding:12px 15px; }
@@ -516,29 +565,29 @@ p { text-align:justify; line-height:170%; margin:0 0 18px; }
 .attr.others { background:@listing-type-bg-others; color:@listing-type-color-others; }
 
 /* Features */
+.feature { margin-top:30px;}
 .feature:hover .feature-img span { color:@main-color; }
 .feature:hover .feature-img { padding-top:0px; padding-bottom:8px; }
 .feature-img { display:block; text-align:center; padding-top:8px; padding-bottom:0px; .transition(@default-transition-duration, @default-transition-ease); }
 .feature-img span.glyphicon { font-size:85px; .transition(@default-transition-duration, @default-transition-ease); }
-.feature-content { text-align:center; }
+.feature-content {
+	h1,h2,h3,h4,h5,h6 { text-align:center; }
+}
 
 /* About */
 .about { background:url('../images/dummy-03.jpg') fixed; background-size:cover; padding:65px 0; }
 .card { background:#fff; padding:22px; border:1px solid #ddd; .box-shadow(0 0 10px #444); }
 
-/* Social Media */
+/* ==========================================================================
+   Social Media
+   ========================================================================== */ 
 .social {
 	padding:7px; width:50px; height:50px; display:inline-block; text-align:center; font-size:25px;
 	.transition(0.4s, @default-transition-ease);
 	background:#707070; color:#fff;
-	margin:5px; 
+	margin:2px 0px; 
 }
 .social:hover {
- 	-webkit-transform:rotate(360deg);
-	-moz-transform:rotate(360deg);
-	-o-transform:rotate(360deg);
-	-ms-transform:rotate(360deg);
-	transform:rotate(360deg);
 	.border-radius(15px, 0, 15px);
 }
 
@@ -558,6 +607,10 @@ p { text-align:justify; line-height:170%; margin:0 0 18px; }
 .social-yahoo:hover { background:#96d3f0; color:#fff; }
 .social-youtube:hover { background:#d84939; color:#fff; }
 
+/* ==========================================================================
+   Pricing Tables
+   ========================================================================== */ 
+   
 /* Pricing Tables - #1 */
 .pricing-table {
 	border:3px solid darken(#fff,10%); padding:6px; .rounded(8px); margin:10px 0;
@@ -635,32 +688,58 @@ p { text-align:justify; line-height:170%; margin:0 0 18px; }
 	.pricing-action { text-align:center; }
 }
 
-/* Footer */
-.footer { background:@footer-background; color:@footer-body-color; padding:70px 5px; }
-.footer h1, .footer h2, .footer h3, .footer h4, .footer h5, .footer h6 { font-family:@header-font; color:@footer-header-color; margin:10px 0 30px; border-bottom:1px dotted #555; padding-bottom:30px; }
-.footer h1:after, .footer h2:after, .footer h3:after, .footer h4:after, .footer h5:after, .footer h6:after {
-	content:"";
-	display:block;
-	width:55px;
-	height:3px; 
-	.border-radius(10px,10px,10px,10px);
-	background:@main-color;
-	position:absolute;
-	top:65px;
+/* ==========================================================================
+   Footer
+   ========================================================================== */ 
+#footer {
+	padding:30px 0 25px;
+	background:@footer-background;
+	color:@footer-body-color;
 }
 
-.footer p { line-height:180%; }
+#footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6 {
+	color:@footer-header-color;
+	text-transform:uppercase;
+	font-weight:100;
+	margin-bottom:20px;
+}
 
-@media (max-width: 767px) {
-	.footer h1, .footer h2, .footer h3, .footer h4, .footer h5, .footer h6 { margin:35px 0 30px; }	
-	.footer h1:after, .footer h2:after, .footer h3:after, .footer h4:after, .footer h5:after, .footer h6:after { top:55px; }
+#footer hr {
+	border-top:1px solid #2a2a2a;
+	border-bottom:1px solid #4a4a4a;
+}
+#footer li {
+	position: relative;
+	padding: 6px 0;
+	border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+#footer li:after {
+	width: 100%;
+	content: "";
+	border-bottom: 1px solid #1a1a1a;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+#footer a:hover {
+	color:#fff;
+}
+
+#footer .social {
+	font-size:18px;
+	padding:12px;
 }
 
 /* Copyright */
-.copyright { background:@copyright-background; color:@copyright-color; padding:30px 0; text-align:center; text-shadow:1px 1px 2px #000; text-transform:uppercase; }
+.copyright {
+	font-size:13px;
+}
 
 /* Form Control */
-.form-control { border-radius:0; }
+.form-control { border-radius:0; box-shadow:1px 1px 1px rgba(0,0,0,0.15); padding:9px 14px; height:40px; }
+.btn { padding:9px 14px; border-radius:0; }
 
 /* Pagination */
 .pagination > li > a,
