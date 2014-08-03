@@ -429,7 +429,7 @@ h3 { font-size:22px; }
 h4 { font-size:20px; }
 h5 { font-size:18px; }
 h6 { font-size:15px; }
-.main-header { font-family:@header-font; margin:20px 0; font-weight:200; color:@header-color; border-bottom:1px solid #bbb;
+.main-header { font-family:@header-font; margin:0 0 20px; font-weight:200; color:@header-color; border-bottom:1px solid #bbb;
 	&:after { margin:10px 0 -2px; content:" "; background:url('../images/bg-gray-tile.png'); display:block; width:100px; height:3px; }
 	&.no-border { border-bottom:0; }
 	&.no-border:after { display:none; }
@@ -579,6 +579,91 @@ h6 { font-size:15px; }
 .card { background:#fff; padding:22px; border:1px solid #ddd; .box-shadow(0 0 10px #444); }
 
 /* ==========================================================================
+   Box Content (Our Team)
+   ========================================================================== */ 
+.box-content.thumbnail {
+	max-width: 255px;
+	display: inline-block;
+	margin-bottom: 30px;
+	border: 0;
+	padding: 0;
+	background: #fff;
+	
+	.caption{
+		text-align: left;
+		font-size: 13px;
+		padding:14px;
+	}
+}
+
+.box-content.thumbnail h3 {
+	text-align: left;
+	font-size: 18px;
+	line-height: 18px;
+	padding:0;
+	margin:10px 0 15px;
+}
+
+.box-content.thumbnail .item-image {
+	overflow: hidden;
+	display:block;
+}
+
+.box-content .item-image>img {
+	-webkit-transition: all .2s ease 0s;
+	-moz-transition: all .2s ease 0s;
+	-o-transition: all .2s ease 0s;
+	transition: all .2s ease 0s;
+	
+	-webkit-filter: grayscale(40%);
+	-moz-filter: grayscale(40%);
+	filter: grayscale(40%);
+}
+
+.box-content .item-image:hover>img {
+	-webkit-filter: grayscale(0%);
+	-moz-filter: grayscale(0%);
+	filter: grayscale(0%);
+}
+
+
+/* ==========================================================================
+   Panel Group (FAQ)
+   ========================================================================== */ 
+.panel-group .panel {
+	border-radius:0;
+	border:0;
+	.box-shadow(0px 1px 1px rgba(0,0,0,0.25));
+}
+
+
+/* ==========================================================================
+   Skills / jQuery Knob
+   ========================================================================== */ 
+
+.skills .skill {
+  display: block;
+  clear: both;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.skills .skill .skill-count {
+  display: inline-block;
+  height: 64px;
+  margin-top: 3px;
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 25px;
+}
+
+.skills .skill h6 {
+  text-transform: uppercase;
+  font-weight: 100;
+  margin:0 0 5px;
+}
+
+/* ==========================================================================
    Social Media
    ========================================================================== */ 
 .social {
@@ -721,6 +806,10 @@ h6 { font-size:15px; }
 	position: absolute;
 	bottom: 0;
 	left: 0;
+}
+
+#footer li:last-child {
+	border-bottom: 0px;
 }
 
 #footer a:hover {
